@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cookies</title>
+</head>
+<body>
+
+
+<script>
+  //document.cookie ="Firstname=John";
+  //document.cookie ="Lastname=Smith";
+
+  function setCookie(cookieName, cookieValue, expireDays) {
+    let date = new Date();
+    date.setTime(date.getTime() + (expireDays * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + date.toUTCString();
+    document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+  }
+
+
+
+  setCookie("Firstname","George",365);
+  setCookie("Lastname","Kyriakou",365);
+
+  let cookies=document.cookie;
+  console.log(cookies);
+</script>
+</body>
+</html>
