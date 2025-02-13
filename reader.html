@@ -47,9 +47,14 @@
         document.getElementById("content").innerHTML = content;
     })
 
+    let camera_index = 0;
+    let cameras_list;
+
     Instascan.Camera.getCameras().then(function (cameras) {
+        cameras_list = cameras;
+
         if (cameras.length > 0) {
-            scanner.start(cameras[1]);
+            scanner.start(cameras[0]);
         } else {
             console.error('No cameras found.');
             alert("No cameras found.");
@@ -57,6 +62,13 @@
     }).catch(function (e) {
         console.error(e);
     });
+
+    function changeCamera() {
+        camera_index++;
+        if (camera_index >= cameras_list.length) {
+            camera_index = 0;
+        }
+    }
 
 </script>
 </body>
