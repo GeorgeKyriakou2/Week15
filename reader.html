@@ -73,6 +73,7 @@
         CameraSelection.innerHTML = 'Camera Used is:' + camera_index;
         if (camera_index >= cameras_list.length) {
             camera_index = 0;
+            CameraSelection.innerHTML = 'Camera Used is:' + camera_index;
         }
         scanner.stop().then(function () {
             scanner.start(cameras_list[camera_index]);
@@ -80,7 +81,7 @@
             console.error('Failed to switch cameras:', error);
         });
     }
-
+    CameraSelection.innerHTML = 'Camera Used is:' + camera_index;
 </script>
 </body>
 </html>
