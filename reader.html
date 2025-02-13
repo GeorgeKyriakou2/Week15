@@ -10,6 +10,7 @@
 <video id="preview"></video>
 
 <div style="margin: 20px; padding: 20px; background-color: black; color: white; text-align: center;" id="content"></div>
+<p id="CameraSelection"></p>
 
 <button type="button" onclick="changeCamera()">Switch Camera</button>
 <script>
@@ -77,7 +78,8 @@
             console.error('Failed to switch cameras:', error);
         });
     }
-
+let CameraSelection = document.getElementById('CameraSelection');
+    CameraSelection.innerHTML = 'Camera Used is:' + camera_index;
 </script>
 </body>
 </html>
