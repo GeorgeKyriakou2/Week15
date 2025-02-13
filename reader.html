@@ -71,13 +71,12 @@
         if (camera_index >= cameras_list.length) {
             camera_index = 0;
         }
+        scanner.stop().then(function () {
+            scanner.start(cameras_list[camera_index]);
+        }).catch(function (error) {
+            console.error('Failed to switch cameras:', error);
+        });
     }
-
-    scanner.stop().then(function () {
-        scanner.start(cameras_list[camera_index]);
-    }).catch(function (error) {
-        console.error('Failed to switch cameras:', error);
-    });
 
 </script>
 </body>
