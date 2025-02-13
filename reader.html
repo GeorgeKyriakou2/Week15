@@ -69,6 +69,8 @@
 
     function changeCamera() {
         camera_index++;
+        let CameraSelection = document.getElementById('CameraSelection');
+        CameraSelection.innerHTML = 'Camera Used is:' + camera_index;
         if (camera_index >= cameras_list.length) {
             camera_index = 0;
         }
@@ -78,8 +80,7 @@
             console.error('Failed to switch cameras:', error);
         });
     }
-let CameraSelection = document.getElementById('CameraSelection');
-    CameraSelection.innerHTML = 'Camera Used is:' + camera_index;
+
 </script>
 </body>
 </html>
