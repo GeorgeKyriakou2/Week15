@@ -73,6 +73,12 @@
         }
     }
 
+    scanner.stop().then(function () {
+        scanner.start(cameras_list[camera_index]);
+    }).catch(function (error) {
+        console.error('Failed to switch cameras:', error);
+    });
+
 </script>
 </body>
 </html>
