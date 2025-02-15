@@ -1,0 +1,38 @@
+.Question{
+     text-shadow: 1.5px 1.5px 1px darkcyan;
+     box-Shadow: 5px 5px 3px blue;
+}
+
+#hint{
+     box-shadow: 7px 7px 10px black;
+     font-size: 17px;
+     border-radius: 5px  5px;
+     opacity: 0.5;
+
+}
+
+.button:hover {
+     padding: 10px;
+     border: 2px solid black;
+     border-radius: 3px;
+     background-color: black;
+     color: white;
+}
+.button:active {
+
+}
+
+/*input[type=text] {
+    padding: 10px;
+     margin: 5px;
+     font-size: 16px;
+     border: 2px solid black;
+}*/
+
+.FormStyling{
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    border: 2px solid black;
+    color: steelblue;
+}
